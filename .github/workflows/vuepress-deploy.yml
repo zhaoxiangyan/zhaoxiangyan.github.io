@@ -73,7 +73,7 @@ jobs:
           FOLDER: docs/.vuepress/dist
 
       - name: Async Github Branch To Gitee
-        uses: shanghaobo/github-branch-gitee@v1.0.0
+        uses: zhaoxiangyan/github-branch-to-gitee@main
         with:
           github_repo: zhaoxiangyan/zhaoxiangyan.github.io
           github_branch: gh-pages
