@@ -35,7 +35,7 @@
 
 #     - name: Deploy
 #       uses: peaceiris/actions-gh-pages@v3
-#       env: 
+#       env:
 #         ACTIONS_DEPLOY_KEY: ${{secrets.ACCESS_TOKEN}}
 #         PUBLISH_BRANCH: gh-pages
 #         PUBLISH_DIR: docs/.vuepress/dist
@@ -59,10 +59,10 @@ jobs:
           persist-credentials: false
 
       - name: install
-        run: yarn install 
+        run: yarn install
 
       - name: Build
-        run:  yarn build
+        run: yarn build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@releases/v3
@@ -71,3 +71,13 @@ jobs:
           REPOSITORY_NAME: zhaoxiangyan/zhaoxiangyan.github.io
           BRANCH: gh-pages
           FOLDER: docs/.vuepress/dist
+
+      - name: Async Github Branch To Gitee
+        uses: shanghaobo/github-branch-gitee@master
+        with:
+          github_repo: zhaoxiangyan/zhaoxiangyan.github.io
+          github_branch: gh-pages
+          gitee_repo: zhaoxiangyan/zhaoxiangyan
+          gitee_branch: master
+          username: ${{ secrets.GITEE_USERNAME }}
+          password: ${{ secrets.GITEE_PASSWORD }}

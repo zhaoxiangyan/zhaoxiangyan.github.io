@@ -21,6 +21,7 @@ module.exports = {
       { text: "React", link: "/react/" }, // 内部链接 以docs为根目录
       { text: "Markdown", link: "/markdown/" },
       { text: "Javascript", link: "/javascript/" },
+      { text: "Git", link: "/git/" },
       { text: "博客", link: "https://www.zhaoxiangyan.xyz/" }, // 外部链接
       // 下拉列表
       {
@@ -39,9 +40,9 @@ module.exports = {
       "/react/": [
         {
           title: "开始",
-          sidebarDepth:2,
+          sidebarDepth: 2,
           collapsable: false,
-          children: ["","base"],
+          children: ["", "base"],
         },
       ],
       "/markdown/": [""],
@@ -50,6 +51,18 @@ module.exports = {
           title: "基础",
           collapsable: false,
           children: ["", "this", "function"],
+        },
+      ],
+      "/git/": [
+        {
+          title: "Git",
+          collapsable: false,
+          children: [""],
+        },
+        {
+          title: "GitHub",
+          collapsable: false,
+          children: ["git-action"],
         },
       ],
     },
