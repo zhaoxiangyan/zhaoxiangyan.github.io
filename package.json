@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "dev": "vuepress dev docs",
+    "dev:temp": "vuepress dev docs --temp .temp",
     "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andy",
   "license": "ISC",
   "devDependencies": {
-    "@vuepress/theme-blog": "^2.3.3",
+    "@vuepress/plugin-back-to-top": "^1.9.7",
     "vuepress": "^1.9.7"
   }
 }

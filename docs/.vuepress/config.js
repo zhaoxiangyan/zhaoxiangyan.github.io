@@ -9,10 +9,11 @@ module.exports = {
   markdown: {
     lineNumbers: true, // 代码块显示行号
   },
+  plugins: ["@vuepress/back-to-top"],
   themeConfig: {
     // logo: '/logo.png',
     sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
-    lastUpdated: "Last Updated", // 文档更新时间：每个文件git最后提交的时间
+    lastUpdated: "最近更新时间", // 文档更新时间：每个文件git最后提交的时间
     // nextLinks: false, // 默认值是 true 。设置为 false 来禁用所有页面的 下一篇 链接
     // prevLinks: false, // 默认值是 true 。设置为 false 来禁用所有页面的 上一篇 链接
     // displayAllHeaders:true, //显示所有页面的标题链接
@@ -22,6 +23,8 @@ module.exports = {
       { text: "Markdown", link: "/markdown/" },
       { text: "Javascript", link: "/javascript/" },
       { text: "Git", link: "/git/" },
+      { text: "Vue", link: "/vue/" },
+      { text: "移动端", link: "/mobile/" },
       { text: "博客", link: "https://www.zhaoxiangyan.xyz/" }, // 外部链接
       // 下拉列表
       {
@@ -42,7 +45,13 @@ module.exports = {
           title: "开始",
           sidebarDepth: 2,
           collapsable: false,
-          children: ["", "base"],
+          children: ["", "base", "advanced"],
+        },
+        {
+          title: "代码库",
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ["dependencies"],
         },
       ],
       "/markdown/": [""],
@@ -65,28 +74,27 @@ module.exports = {
           children: ["git-action"],
         },
       ],
+      "/vue/": [
+        {
+          title: "Vue",
+          collapsable: false,
+          children: [""],
+        },
+        {
+          title: "代码库",
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ["framework", "scaffold"],
+        },
+      ],
+      "/mobile/": [
+        {
+          title: "移动端",
+          collapsable: false,
+          children: [""],
+        },
+      ],
     },
     // sidebar: "auto",
-    // sidebar: [
-    //     {
-    //         title:'Markdown',
-    //         sidebarDepth:1,
-    //         collapsable:false,
-    //         children:[
-    //             '/markdown/'
-    //         ]
-    //     },
-    //     {
-    //         title: 'React',
-    //         // path: '/about/', // 可选的, 应该是一个绝对路径
-    //         collapsable: false, // 可选的, 默认值是 true,
-    //         sidebarDepth: 1, // 可选的, 默认值是 1
-    //         children: [
-    //             '/react/', // 以docs为根目录来查找文件
-    //             // 上面地址查找的是：docs>react>README.md 文件
-    //             // 自动加.md 每个子选项的标题 是该md文件中的第一个h1/h2/h3标题
-    //         ]
-    //     }
-    // ],
   },
 };

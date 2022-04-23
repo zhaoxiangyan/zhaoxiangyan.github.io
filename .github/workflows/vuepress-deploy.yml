@@ -1,45 +1,3 @@
-# name: Build and Deploy
-# on: [push]
-# jobs:
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
-#     - name: Checkout
-#       uses: actions/checkout@master
-
-#     - name: vuepress
-#       uses: zhaoxiangyan/vuepress@master
-#       env:
-#         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-#         TARGET_REPO: zhaoxiangyan/vuepress
-#         TARGET_BRANCH: master
-#         BUILD_SCRIPT: yarn && yarn build
-#         BUILD_DIR: docs/.vuepress/dist/
-
-# name: blog deploy
-
-# on:
-#   push:
-#     branches:
-#     - master
-
-# jobs:
-#   build-deploy:
-#     runs-on: ubuntu-18.04
-#     steps:
-#     - uses: actions/checkout@master
-
-#     - run: npm install
-
-#     - run: npm run build
-
-#     - name: Deploy
-#       uses: peaceiris/actions-gh-pages@v3
-#       env:
-#         ACTIONS_DEPLOY_KEY: ${{secrets.ACCESS_TOKEN}}
-#         PUBLISH_BRANCH: gh-pages
-#         PUBLISH_DIR: docs/.vuepress/dist
-
 name: Deploy GitHub Pages
 
 # 触发条件：在 push 到 master 分支后
@@ -81,6 +39,7 @@ jobs:
           gitee_branch: master
           username: ${{ secrets.GITEE_USERNAME }}
           password: ${{ secrets.GITEE_PASSWORD }}
+
       - name: Build Gitee Pages
         uses: yanglbme/gitee-pages-action@main
         with:
