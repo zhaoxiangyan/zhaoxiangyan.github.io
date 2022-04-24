@@ -44,6 +44,9 @@ title可加可不加
 
 title可加可不加
 
+**自动链接**
+`<https://www.baidu.com/>`
+
 注：Markdown本身语法不支持链接在新页面中打开，貌似vuepress做了处理，是可以的。别的平台可能就不行了，如果想要在新页面中打开的话可以用html语言的a标签代替。
 <a href="https://www.vuepress.com" target="_blank">Vuepress</a>
 
@@ -93,15 +96,6 @@ fun();
 ```
 ## 十、流程图
 
-```flow
-st=>start: Start
-op=>operation: Your Operation
-cond=>condition: Yes or No?
-e=>end
-st->op->cond
-cond(yes)->e
-cond(no)->op
-```
 ## 十一、目录结构
 ```
 project

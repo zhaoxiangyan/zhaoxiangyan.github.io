@@ -82,6 +82,12 @@ module.exports = {
           collapsable: false,
           children: ["", "this", "function", "dependencies"],
         },
+        {
+          title:"面试",
+          collapsable:false,
+          sidebarDepth:2,
+          children:["shallow-deep-copy","event-loop"]
+        }
       ],
       "/git/": [
         {
