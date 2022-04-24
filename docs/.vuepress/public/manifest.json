@@ -1,0 +1,20 @@
+{
+  "name": "Andy",
+  "short_name": "Andy",
+  "start_url": "index.html",
+  "display": "standalone",
+  "background_color": "#3eaf7c",
+  "description": "Andy的个人主页",
+  "theme_color": "green",
+  "icons": [
+    {
+      "src": "./favicon.ico",
+      "sizes": "48x48"
+    }
+  ],
+  "related_applications": [
+    {
+      "platform": "web"
+    }
+  ]
+}

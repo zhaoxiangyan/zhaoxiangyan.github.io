@@ -4,12 +4,33 @@ module.exports = {
   // 注入到当前页面的 HTML <head> 中的标签
   head: [
     ["link", { rel: "icon", href: "/favicon.ico" }], // 增加一个自定义的 favicon(网页标签的图标)
+    ["link", { rel: "manifest", href: "/manifest.json" }],
+    [
+      "script",
+      {
+        src: "https://s9.cnzz.com/z_stat.php?id=1281101952&web_id=1281101952",
+        defer: "defer",
+      },
+    ], // 友盟cnzz统计
   ],
   base: "/", // 这是部署到github相关的配置 下面会讲
   markdown: {
     lineNumbers: true, // 代码块显示行号
   },
-  plugins: ["@vuepress/back-to-top"],
+  plugins: [
+    "@vuepress/back-to-top",
+    "@vuepress/medium-zoom",
+    [
+      "@vuepress/pwa",
+      {
+        serviceWorker: true,
+        updatePopup: {
+          message: "发现博客有更新啦",
+          buttonText: "刷新",
+        },
+      },
+    ],
+  ],
   themeConfig: {
     // logo: '/logo.png',
     sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
@@ -59,14 +80,14 @@ module.exports = {
         {
           title: "基础",
           collapsable: false,
-          children: ["", "this", "function"],
+          children: ["", "this", "function", "dependencies"],
         },
       ],
       "/git/": [
         {
           title: "Git",
           collapsable: false,
-          children: [""],
+          children: ["", "fix"],
         },
         {
           title: "GitHub",
