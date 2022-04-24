@@ -1,11 +1,11 @@
 {
   "name": "Andy",
   "short_name": "Andy",
-  "start_url": "index.html",
+  "start_url": "./index.html",
   "display": "standalone",
-  "background_color": "#3eaf7c",
+  "background_color": "#fff",
   "description": "Andy的个人主页",
-  "theme_color": "green",
+  "theme_color": "#3eaf7c",
   "icons": [
     {
       "src": "./favicon.ico",
