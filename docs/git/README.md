@@ -1,6 +1,9 @@
 # Git
 
 ## git commit 提交规范
+``` bash
+git commit -m "hello world"
+```
 
 commit 的类型：
 
@@ -17,3 +20,4 @@ commit 的类型：
 - chore: 其他修改（不在上述类型中的修改）
 - release: 发布新版本
 - workflow: 工作流相关文件修改
+- upload: 代码上传相关

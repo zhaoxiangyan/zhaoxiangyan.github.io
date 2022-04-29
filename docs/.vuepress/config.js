@@ -46,6 +46,7 @@ module.exports = {
       { text: "Git", link: "/git/" },
       { text: "Vue", link: "/vue/" },
       { text: "移动端", link: "/mobile/" },
+      { text: "工具", link: "/tool/" },
       { text: "博客", link: "https://www.zhaoxiangyan.xyz/" }, // 外部链接
       // 下拉列表
       {
@@ -72,7 +73,7 @@ module.exports = {
           title: "代码库",
           collapsable: false,
           sidebarDepth: 2,
-          children: ["dependencies"],
+          children: ["dependencies", "hooks"],
         },
       ],
       "/markdown/": [""],
@@ -83,11 +84,11 @@ module.exports = {
           children: ["", "this", "function", "dependencies"],
         },
         {
-          title:"面试",
-          collapsable:false,
-          sidebarDepth:2,
-          children:["shallow-deep-copy","event-loop"]
-        }
+          title: "面试",
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ["shallow-deep-copy", "event-loop"],
+        },
       ],
       "/git/": [
         {
@@ -121,7 +122,27 @@ module.exports = {
           children: [""],
         },
       ],
+      "/tool/": [
+        {
+          title: "代码",
+          collapsable: false,
+          children: [""],
+        },
+      ],
     },
     // sidebar: "auto",
+  },
+  // md文件内webp图片报错
+  chainWebpack: (config, isServer) => {
+    const inlineLimit = 10000;
+    config.module
+      .rule("images")
+      .test(/\.(png|jpe?g|gif|webp)(\?.*)?$/)
+      .use("url-loader")
+      .loader("url-loader")
+      .options({
+        limit: inlineLimit,
+        name: `assets/img/[name].[hash:8].[ext]`,
+      });
   },
 };
