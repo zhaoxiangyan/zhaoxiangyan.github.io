@@ -81,7 +81,7 @@ module.exports = {
         {
           title: "基础",
           collapsable: false,
-          children: ["", "this", "function", "dependencies"],
+          children: ["", "this", "function"],
         },
         {
           title: "面试",
@@ -89,11 +89,18 @@ module.exports = {
           sidebarDepth: 2,
           children: ["shallow-deep-copy", "event-loop"],
         },
+        {
+          title: "代码库",
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ["dependencies"],
+        },
       ],
       "/git/": [
         {
           title: "Git",
           collapsable: false,
+          sidebarDepth: 2,
           children: ["", "fix"],
         },
         {
@@ -126,7 +133,7 @@ module.exports = {
         {
           title: "代码",
           collapsable: false,
-          children: [""],
+          children: ["", "tool"],
         },
       ],
     },
