@@ -87,6 +87,12 @@ git branch -f master c6  (c6是提交记录哈希值)
 
 将一些提交复制到当前所在位置(HEAD)下面
 
+git cherry-pick 代码冲突：
+
+- git cherry-pick --continue 继续
+- git chrrry-pick --abort 放弃(回到操作前的样子，什么都没发生过)
+- git chrrry-pick --quit 退出(不回到操作前的样子，保留已经成功的 commit，退出 cherry-pick 流程)
+
 ### 2.git rebase -i
 
 - 调整提交记录的顺序
