@@ -87,7 +87,7 @@ module.exports = {
           title: "面试",
           collapsable: false,
           sidebarDepth: 2,
-          children: ["shallow-deep-copy", "event-loop"],
+          children: ["shallow-deep-copy", "event-loop","operator"],
         },
         {
           title: "代码库",
@@ -106,7 +106,7 @@ module.exports = {
         {
           title: "GitHub",
           collapsable: false,
-          children: ["git-action"],
+          children: ["git-action","pull-request"],
         },
       ],
       "/vue/": [
