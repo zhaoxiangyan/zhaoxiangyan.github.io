@@ -106,7 +106,7 @@ module.exports = {
         {
           title: "GitHub",
           collapsable: false,
-          children: ["git-action","pull-request"],
+          children: ["git-action","pull-request","git-flow"],
         },
       ],
       "/vue/": [
