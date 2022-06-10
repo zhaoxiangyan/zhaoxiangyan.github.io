@@ -40,6 +40,7 @@ module.exports = {
     // displayAllHeaders:true, //显示所有页面的标题链接
     // 导航栏
     nav: [
+      { text: "Node", link: "/node/" },
       { text: "React", link: "/react/" }, // 内部链接 以docs为根目录
       { text: "Markdown", link: "/markdown/" },
       { text: "Javascript", link: "/javascript/" },
@@ -62,6 +63,20 @@ module.exports = {
     ],
     // 侧边栏
     sidebar: {
+      "/node/": [
+        {
+          title: "npm",
+          sidebarDepth: 2,
+          collapsable: false,
+          children: [""],
+        },
+        {
+          title: "代码库",
+          collapsable: false,
+          sidebarDepth: 2,
+          children: ["dependencies"],
+        },
+      ],
       "/react/": [
         {
           title: "开始",
@@ -87,7 +102,7 @@ module.exports = {
           title: "面试",
           collapsable: false,
           sidebarDepth: 2,
-          children: ["shallow-deep-copy", "event-loop","operator"],
+          children: ["shallow-deep-copy", "event-loop", "operator"],
         },
         {
           title: "代码库",
@@ -106,7 +121,7 @@ module.exports = {
         {
           title: "GitHub",
           collapsable: false,
-          children: ["git-action","pull-request","git-flow"],
+          children: ["git-action", "pull-request", "git-flow"],
         },
       ],
       "/vue/": [
@@ -135,6 +150,11 @@ module.exports = {
           collapsable: false,
           children: ["", "tool"],
         },
+        {
+          title:"测试",
+          collapsable:false,
+          children:["jest"]
+        }
       ],
     },
     // sidebar: "auto",
