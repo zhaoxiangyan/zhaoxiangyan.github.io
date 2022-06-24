@@ -99,6 +99,11 @@ module.exports = {
           children: ["", "this", "function"],
         },
         {
+          title:"Typescript",
+          collapsable:false,
+          children:["typescript"]
+        },
+        {
           title: "面试",
           collapsable: false,
           sidebarDepth: 2,
