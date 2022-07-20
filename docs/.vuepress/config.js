@@ -47,6 +47,7 @@ module.exports = {
       { text: "Git", link: "/git/" },
       { text: "Vue", link: "/vue/" },
       { text: "移动端", link: "/mobile/" },
+      { text: "Flutter", link: "/flutter/" },
       { text: "工具", link: "/tool/" },
       { text: "博客", link: "https://www.zhaoxiangyan.xyz/" }, // 外部链接
       // 下拉列表
@@ -99,9 +100,9 @@ module.exports = {
           children: ["", "this", "function"],
         },
         {
-          title:"Typescript",
-          collapsable:false,
-          children:["typescript"]
+          title: "Typescript",
+          collapsable: false,
+          children: ["typescript"],
         },
         {
           title: "面试",
@@ -149,6 +150,13 @@ module.exports = {
           children: [""],
         },
       ],
+      "/flutter/": [
+        {
+          title: "Flutter",
+          collapsable: false,
+          children: ["", "dart"],
+        },
+      ],
       "/tool/": [
         {
           title: "代码",
@@ -156,10 +164,10 @@ module.exports = {
           children: ["", "tool"],
         },
         {
-          title:"测试",
-          collapsable:false,
-          children:["jest"]
-        }
+          title: "测试",
+          collapsable: false,
+          children: ["jest"],
+        },
       ],
     },
     // sidebar: "auto",

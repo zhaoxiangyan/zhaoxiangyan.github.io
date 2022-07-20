@@ -11,6 +11,18 @@ interface User{
 ## keyof
 获取类型键值
 
+## in
+获取联合类型的值
+``` ts
+type name = 'firstName'|'lastName';
+type TName={
+    [key in name]:string;
+}={
+    firstName:string;
+    lastName:string;
+}
+```
+
 ## Pick
 从类型定义的属性中，选取指定一组属性，返回一个新的类型定义
 ``` ts
@@ -88,6 +100,15 @@ Omit<User,'sex'> = {
     class?:string;
 }
 ```
+
+# 特殊符号
+
+## ?
+属性或参数中使用：表示该属性或参数可选项
+
+## !
+属性或参数中使用：表示强制解析（告诉ts编译器，这里一定有值）
+变量后使用：表示类型推断排除null、undefined
 
 
 
