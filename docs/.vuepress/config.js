@@ -154,7 +154,7 @@ module.exports = {
         {
           title: "Flutter",
           collapsable: false,
-          children: ["", "dart"],
+          children: ["", "dart", "flutter"],
         },
       ],
       "/tool/": [
@@ -167,6 +167,11 @@ module.exports = {
           title: "测试",
           collapsable: false,
           children: ["jest"],
+        },
+        {
+          title: "命令行",
+          collapsable: false,
+          children: ["pm2"],
         },
       ],
     },
