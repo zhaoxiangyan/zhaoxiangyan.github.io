@@ -32,6 +32,8 @@ module.exports = {
     ],
   ],
   themeConfig: {
+    // contentMargin: "20px",
+    // maxWidth: "80%",
     // logo: '/logo.png',
     sidebarDepth: 2, // e'b将同时提取markdown中h2 和 h3 标题，显示在侧边栏上。
     lastUpdated: "最近更新时间", // 文档更新时间：每个文件git最后提交的时间
@@ -100,6 +102,11 @@ module.exports = {
           children: ["", "this", "function"],
         },
         {
+          title: "ES6",
+          collapsable: false,
+          children: ["set"],
+        },
+        {
           title: "Typescript",
           collapsable: false,
           children: ["typescript"],
@@ -108,7 +115,12 @@ module.exports = {
           title: "面试",
           collapsable: false,
           sidebarDepth: 2,
-          children: ["shallow-deep-copy", "event-loop", "operator"],
+          children: [
+            "shallow-deep-copy",
+            "event-loop",
+            "operator",
+            "questions",
+          ],
         },
         {
           title: "代码库",
