@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "dev:temp": "vuepress dev docs --temp .temp",
-    "build": "vuepress --openssl-legacy-provider  build docs",
+    "build": "vuepress build docs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Andy",
